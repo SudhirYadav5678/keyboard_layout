@@ -1,3 +1,5 @@
+![alt text]({CCE7839A-903C-40FF-9113-D33B1C2D1039}.png)
+
 This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
 
 ## Getting Started
