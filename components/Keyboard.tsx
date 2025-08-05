@@ -4,6 +4,7 @@ import {
 } from "react-icons/fi";
 import { BsFillSkipBackwardFill, BsFillPlayFill, BsFillSkipForwardFill } from "react-icons/bs";
 import { TbWindow } from "react-icons/tb";
+import { FaFingerprint } from "react-icons/fa";
 
 const topRow = [
     { icon: null, label: 'esc' },
@@ -19,7 +20,7 @@ const topRow = [
     { icon: <FiVolumeX size={14} />, label: 'F10' },
     { icon: <FiVolume2 size={14} />, label: 'F11' },
     { icon: <FiVolume2 size={14} />, label: 'F12' },
-    { icon: null, label: '' },
+    { icon: <FaFingerprint size={14} />, label: '' },
 ];
 
 const restKeys = [
@@ -81,7 +82,11 @@ const Keyboard = function () {
                                                 <span className="text-sm leading-tight">{bottom}</span>
                                             </div>
                                         ) : (
-                                            <span className="text-sm">{key}</span>
+                                            <span className="text-sm">{
+                                                key === '↑' || key === '↓'
+                                                    ? (<span className="text-sm"><div className="flex flex-col">{key}</div></span>)
+                                                    : (<span className="text-sm">{key}</span>)
+                                            }</span>
                                         )}
                                     </div>
                                 );
